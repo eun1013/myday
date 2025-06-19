@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/myday/static/css/main.556125f1.css",
+    "main.js": "/myday/static/js/main.6799733e.js",
+    "static/media/img.webp": "/myday/static/media/img.d0cc251b59700a180ecc.webp",
+    "static/media/img03.webp": "/myday/static/media/img03.685884177ad1799fd605.webp",
+    "index.html": "/myday/index.html",
+    "main.556125f1.css.map": "/myday/static/css/main.556125f1.css.map",
+    "main.6799733e.js.map": "/myday/static/js/main.6799733e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.556125f1.css",
+    "static/js/main.6799733e.js"
+  ]
+}
