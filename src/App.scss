@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+:root{
+--text-color:rgba(36, 35, 35, 0.726);
+--bg-color:rgba(255, 255, 255, 0.6);
+--accent-color:rgba(65, 202, 248, 0.5);
+}
+
+body.dark{
+--bg-color:rgba(36, 35, 35, 0.726);
+--text-color:rgba(255, 255, 255, 0.8);
+--accent-color:rgba(65, 202, 248, 0.5);
+background-image:url(./images/img03.webp) ;
+background-size: cover;
+}
+
+*{margin: 0; padding: 0;}
+
+ul,li{list-style: none;}
+
+body{
+    font-family: "Freesentation-9Black", sans-serif;
+    font-size: 62.5%; //10px
+    color:var(--text-color);
+    background-image: url(./images/img.webp);
+    background-size: cover;
+    color: var(--text-color);
+    height: 100vh;
+    overflow: hidden;
+}
+.app-nav{
+    position: relative;
+    .weather{
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
+    .darkmode{
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    z-index: 10;
+    }
+    button{
+    border: 1px solid var(--text-color);
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size:1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+        }
+    }
+
+.app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.time{
+    font-size: clamp(1rem,7vw,10rem); //반응형으로 처리할 때 사용하기 좋음
+    font-weight: bolder;
+    position: absolute;
+    top: 15rem;
+}
+.login{
+    font-size: clamp(1rem,4vw,40px);
+    h2{
+        margin-bottom: 1rem;
+    }
+    .login-name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    input{
+        width: 30rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+        color: var(--text-color);
+        border: none;
+        border-bottom: 1px solid var(--text-color);
+        background-color: transparent;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    input::placeholder{
+        font-size: 1.5rem;
+        color: var(--text-color);
+    }
+    button{
+        border: 1px solid var(--text-color);
+        padding: 5px;
+        border-radius: 10px;
+        background-color: transparent;
+        color: var(--text-color);
+        font-size:clamp(1rem,4vw,30px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+}
+.main{
+    position: relative;
+    .main-user{
+        font-size: clamp(1rem,4vw,40px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        button{
+        border: 2px solid var(--text-color);
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        background: transparent;
+        color:var(--text-color);
+        font-size:clamp(1rem,4vw,30px);
+        font-family:"Freesentation-9Black", sans-serif;
+        cursor: pointer;
+        }
+    }
+    .todo{
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background:var(--bg-color);
+    padding: 3rem;
+    border-radius: 8px;
+    max-width: 40rem;
+    position: fixed;
+    top:58%;
+    left: 33%;
+    }
+}
+.quote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    color: var(--text-color);
+    font-size:clamp(1rem,1rem,1rem);
+}
+.todoform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    input{
+        width: 30rem;
+        height: 2rem;
+        font-size: 1rem;
+        border: none;
+        border-bottom: 1px solid var(--text-color);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        background-color: transparent;
+        text-align: center;
+        color: var(--text-color);
+    }
+    input::placeholder{
+        font-size: 1.5rem;
+        color: var(--text-color);
+    }
+    button{
+        border: 1px solid var(--text-color);
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        color: var(--text-color);
+        background: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color:var(--text-color);
+}
+.todolist{
+    color: var(--text-color);
+    padding: 1rem;
+    max-height: 13rem;
+    overflow-y: auto;
+    li{
+        font-size: 1rem;
+        button{
+        border: 1px solid var(--text-color);
+        padding: 0 5px;
+        margin-left: 5px;  
+        border-radius: 10%;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        font-size:1rem;
+        text-align: center;
+        }
+        span{
+            margin-left: 10px;
+        }
+    }
+}
+.weather{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
